@@ -43,6 +43,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -848,7 +851,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="CustomAttribute\AuthorizationFilter.cs" />
+    <Compile Include="CustomAttribute\ErrorFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -913,6 +920,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -923,6 +931,24 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryManagement.Common\FactoryManagement.Common.csproj">
+      <Project>{8d7e90c6-4b3f-46d2-b72a-7f0becd88170}</Project>
+      <Name>FactoryManagement.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FactoryManagement.Interface\FactoryManagement.Interface.csproj">
+      <Project>{6f5087a0-476c-4abe-ae81-a278502eb4b0}</Project>
+      <Name>FactoryManagement.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FactoryManagement.Repository\FactoryManagement.Repository.csproj">
+      <Project>{3c43b7e6-d2dd-4bdd-9049-9cd4aeb22af1}</Project>
+      <Name>FactoryManagement.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
