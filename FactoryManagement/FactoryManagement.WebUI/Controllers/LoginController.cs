@@ -12,7 +12,10 @@ namespace FactoryManagement.WebUI.Controllers
     public class LoginController : BaseController
     {
         private ILogin _login;
-        
+        public LoginController()
+        {
+            _login = new Login();
+        }
         // GET: Login
         public ActionResult Index()
         {
@@ -28,23 +31,22 @@ namespace FactoryManagement.WebUI.Controllers
                 resp.Data = _login.Validate();
                 if (resp.Data != null)
                 {
-                    string userJSON = Convert.ToString(resp.Data);
-                    var userDTOobj = JsonConvert.DeserializeObject<ModelLogin>(userJSON);
-                    Session["User"]= userJSON;
-                    resp.Data = userDTOobj;
+                    //string userJSON = Convert.ToString(resp.Data);
+                    //var userDTOobj = JsonConvert.DeserializeObject<ModelLogin>(userJSON);
+                    //Session["User"]= userJSON;
+                    //resp.Data = userDTOobj;
                 }
                 else
                 {
                     resp.Msg = "Something Went Wrong..!!!";
                 }
-                return Json(resp);
             }
             catch (Exception ex)
             {
                 resp.Msg = ex.Message;
                 resp.IsSuccess = false;
             }
-            return Json(resp);
+            return Json(resp, JsonRequestBehavior.AllowGet);
         }
 
     }

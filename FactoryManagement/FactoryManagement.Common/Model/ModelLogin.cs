@@ -9,6 +9,6 @@ namespace FactoryManagement.Common.Model
     public class ModelLogin
     {
         public int UserID { get; set; }
-        public int UserName { get; set; }
+        public string UserName { get; set; }
     }
 }

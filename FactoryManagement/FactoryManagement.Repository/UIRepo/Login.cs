@@ -13,9 +13,9 @@ namespace FactoryManagement.Repository.UIRepo
     {
         //DB _db = new DB();
         private IDB _db;
-        public Login(IDB db)
+        public Login()
         {
-            _db = db;
+            _db = new DB();
         }
         public async Task<ModelLogin> Validate()
         {
@@ -23,6 +23,8 @@ namespace FactoryManagement.Repository.UIRepo
             {
                 ModelLogin modelLogin = new ModelLogin();
                 var a = _db.GetNewID("select UserID from tblUser");
+                modelLogin.UserID = Convert.ToInt32(a);
+                modelLogin.UserName = "Admin";
                 return modelLogin;
             }
             catch (Exception ex)
