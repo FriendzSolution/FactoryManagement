@@ -3,7 +3,11 @@ $(document).ready(async function () {
 
 });
 
-
+document.addEventListener("keydown", function (event) {
+    if (event.keyCode == "13") {
+        validate();
+    }
+});
 const validate = async () => {
     await new Promise(function () {
         debugger

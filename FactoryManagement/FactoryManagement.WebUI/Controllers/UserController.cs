@@ -1,12 +1,14 @@
 ﻿using FactoryManagement.Common;
 using FactoryManagement.Interface.UIinterface;
 using FactoryManagement.Repository.UIRepo;
+using FactoryManagement.WebUI.CustomAttribute;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.Controllers
 {
+    [AuthorizationFilter]
     public class UserController : BaseController
     {
         private IUser _user;

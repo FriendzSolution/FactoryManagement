@@ -2,12 +2,14 @@
 using FactoryManagement.Common.Model;
 using FactoryManagement.Interface.UIinterface;
 using FactoryManagement.Repository.UIRepo;
+using FactoryManagement.WebUI.CustomAttribute;
 using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.Controllers
 {
+    [AuthorizationFilter]
     public class RoleController : BaseController
     {
         private IRole _role;
