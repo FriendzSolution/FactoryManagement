@@ -846,6 +846,8 @@
     <Content Include="Content\assets\js\page\widget-chart.js" />
     <Content Include="Content\assets\js\page\widget-data.js" />
     <Content Include="Content\assets\js\scripts.js" />
+    <Content Include="Content\Pages\Login\loginIndex.js" />
+    <Content Include="Content\Pages\User\userIndex.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -854,6 +856,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomAttribute\AuthorizationFilter.cs" />
     <Compile Include="CustomAttribute\ErrorFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -921,6 +924,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

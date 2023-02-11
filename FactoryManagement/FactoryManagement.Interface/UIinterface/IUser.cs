@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace FactoryManagement.Interface.UIinterface
 {
-    public interface ILogin
+    public interface IUser
     {
-        Task<ModelLogin> Validate(string Username,string Password);
+        Task<IEnumerable<ModelUser>> GetAllUser();
     }
 }

@@ -23,22 +23,25 @@ namespace FactoryManagement.WebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> Validate()
+        public async Task<ActionResult> Validate(string UserName , string Password)
         {
             ResponseModel resp = new ResponseModel();
             try
             {
-                resp.Data = _login.Validate();
+                resp.Data = await _login.Validate(UserName,Password);
                 if (resp.Data != null)
                 {
-                    //string userJSON = Convert.ToString(resp.Data);
-                    //var userDTOobj = JsonConvert.DeserializeObject<ModelLogin>(userJSON);
-                    //Session["User"]= userJSON;
-                    //resp.Data = userDTOobj;
+                    var userDTOobj = JsonConvert.SerializeObject(resp.Data);
+                    Session["User"] = userDTOobj;
+                    resp.IsSuccess = true;
+                    resp.Data = userDTOobj;
+                    resp.Msg = "Login Successfully";
                 }
                 else
                 {
-                    resp.Msg = "Something Went Wrong..!!!";
+                    resp.IsSuccess = false;
+                    resp.Msg = "Username or Password is inValid..!!";
+                    resp.Data = null;
                 }
             }
             catch (Exception ex)

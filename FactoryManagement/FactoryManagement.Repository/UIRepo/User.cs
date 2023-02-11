@@ -10,30 +10,33 @@ using System.Threading.Tasks;
 
 namespace FactoryManagement.Repository.UIRepo
 {
-    public class Login : BaseClass, ILogin
+    public class User : IUser
     {
         private IDB _db;
-        public Login()
+        public User()
         {
             _db = new DB();
         }
-        public async Task<ModelLogin> Validate(string Username, string Password)
+        public async Task<IEnumerable<ModelUser>> GetAllUser()
         {
             try
             {
-                ModelLogin modelLogin = new ModelLogin();
+                List<ModelUser> lstUser = new List<ModelUser>();
                 _db.Conopen();
-                SqlDataReader dr = _db.ExecuteQuery("select * from tblUser where UserName='" + Username + "' and UserPassword='" + Utility.Encrypt(Password) + "' ");
+                SqlDataReader dr = _db.ExecuteQuery("select * from tblUser where IsDeleted = 0");
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        modelLogin.UserID = Convert.ToInt32(dr["UserID"]);
-                        modelLogin.UserName = Convert.ToString(dr["UserName"]);
-                        modelLogin.isActive = Convert.ToBoolean(dr["isActive"]);
+                        ModelUser modelUser = new ModelUser();
+                        modelUser.UserID = Convert.ToInt32(dr["UserID"]);
+                        modelUser.UserName = Convert.ToString(dr["UserName"]);
+                        modelUser.UserPassword = Convert.ToString(dr["UserPassword"]);
+                        modelUser.isActive = Convert.ToBoolean(dr["isActive"]);
+                        lstUser.Add(modelUser);
                     }
                     _db.ConClose();
-                    return modelLogin;
+                    return lstUser;
                 }
                 _db.ConClose();
                 return null;

@@ -1,9 +1,6 @@
 ﻿using FactoryManagement.Common.Model;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.Controllers
@@ -15,8 +12,8 @@ namespace FactoryManagement.WebUI.Controllers
         {
             get
             {
-                string session = Session["User"].ToString();
-                if (session != null)
+                string session = Convert.ToString(Session["User"]);
+                if (session != null && session !="")
                 {
                     model = JsonConvert.DeserializeObject<ModelLogin>(session);
                 }
