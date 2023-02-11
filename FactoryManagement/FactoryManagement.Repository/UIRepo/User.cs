@@ -31,6 +31,7 @@ namespace FactoryManagement.Repository.UIRepo
                         modelUser.UserName = Convert.ToString(dr["UserName"]);
                         modelUser.UserPassword = Convert.ToString(dr["UserPassword"]);
                         modelUser.isActive = Convert.ToBoolean(dr["isActive"]);
+                        modelUser.ModifyDate = Convert.ToDateTime(dr["ModifyDate"]);
                         lstUser.Add(modelUser);
                     }
                     _db.ConClose();

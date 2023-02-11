@@ -19,6 +19,7 @@ namespace FactoryManagement.WebUI.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            var a= CurrenUser.UserID;
             return View();
         }
 
@@ -34,13 +35,13 @@ namespace FactoryManagement.WebUI.Controllers
                     var userDTOobj = JsonConvert.SerializeObject(resp.Data);
                     Session["User"] = userDTOobj;
                     resp.IsSuccess = true;
-                    resp.Data = userDTOobj;
+                    //resp.Data = userDTOobj;
                     resp.Msg = "Login Successfully";
                 }
                 else
                 {
                     resp.IsSuccess = false;
-                    resp.Msg = "Username or Password is inValid..!!";
+                    resp.Msg = "Username or Password is Invalid..!!";
                     resp.Data = null;
                 }
             }
@@ -50,6 +51,12 @@ namespace FactoryManagement.WebUI.Controllers
                 resp.IsSuccess = false;
             }
             return Json(resp, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public async Task<ActionResult> Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Login");
         }
 
     }

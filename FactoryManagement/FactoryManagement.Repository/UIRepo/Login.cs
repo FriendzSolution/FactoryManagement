@@ -23,7 +23,7 @@ namespace FactoryManagement.Repository.UIRepo
             {
                 ModelLogin modelLogin = new ModelLogin();
                 _db.Conopen();
-                SqlDataReader dr = _db.ExecuteQuery("select * from tblUser where UserName='" + Username + "' and UserPassword='" + Utility.Encrypt(Password) + "' ");
+                SqlDataReader dr = _db.ExecuteQuery("select * from tblUser where IsDeleted = 0 and UserName='" + Username + "' and UserPassword='" + Utility.Encrypt(Password) + "' ");
                 if (dr.HasRows)
                 {
                     while (dr.Read())
