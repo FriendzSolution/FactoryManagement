@@ -12,5 +12,6 @@ namespace FactoryManagement.Interface.UIinterface
         Task<string> SaveRole(ModelRole modelRole);
         Task<ModelRole> EditRole(int RoleID);
         Task<IEnumerable<ModelRole>> GetAllRole();
+        Task<int> DeleteRole(int RoleID, int UserID);
     }
 }

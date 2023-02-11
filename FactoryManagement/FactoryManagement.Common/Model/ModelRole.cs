@@ -17,6 +17,7 @@ namespace FactoryManagement.Common.Model
         public DateTime? ModifyDate { get; set; }
         public int DeletedBy { get; set; }
         public bool IsDeletd { get; set; }
+        public int fk_Companyid { get; set; }
         public DateTime? DeletedDate { get; set; }
     }
 }

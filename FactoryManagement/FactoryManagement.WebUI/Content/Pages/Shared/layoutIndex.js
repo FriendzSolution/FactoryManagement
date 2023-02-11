@@ -9,9 +9,11 @@ function Error(heading,error) {
         //timer: 5000,
     });
 }
+function Success(heading, Msg) {
+    swal(heading, Msg, 'success');
+}
 
 function SetDateOnTextbox(date) {
-    debugger
     var retrunDate;
     var valueDate = date == null ? null : new Date(parseInt(date.substring(6)));
     if (valueDate != null) {
@@ -23,7 +25,6 @@ function SetDateOnTextbox(date) {
     return retrunDate;
 }
 function Datefilter(date) {
-    debugger
     var retrunDate;
     var valueDate = date == null ? null : new Date(parseInt(date.substring(6)));
     if (valueDate != null) {

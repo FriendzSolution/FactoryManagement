@@ -10,30 +10,30 @@
         <div class="col-12">
 
             <div class="card-header">
-                <h4>View User Role</h4>
+                <h4>VIEW USER ROLE</h4>
                 <div class="card-header-action">
-                    <button class="btn btn-info btn-icon icon-left" ><i class="fas fa-"></i>Add New</button>
-                    <button class="btn btn-info btn-icon icon-left" ><i class="fas fa-undo"></i>Refresh</button>
+                    <button class="btn btn-info btn-icon icon-left" id="btnNewadd" onclick="btnNewadd();">Add New</button>
+                    <button class="btn btn-info btn-icon icon-left" >Refresh</button>
                 </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped" id="UserTable">
-                        <thead>
+                    <table class="table table-striped" id="RoleTable">
+                        <thead >
                             <tr>
                                 <th>
                                     S.no
                                 </th>
                                 <th>Status</th>
-                                <th>User Name</th>
-                                <th>Password</th>
+                                <th>Role Name</th>
+                                <th>Create Date</th>
                                 <th>Action</th>
                             </tr>
                             <tr class="text-white filters">
                                 <th class="text-white"></th>
                                 <th class="text-white"><select><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></th>
-                                <th class="text-white"><input type="text" placeholder="Search Password" style="width:100%;" /></th>
-                                <th class="text-white"><input type="text" placeholder="Search UserName" style="width:100%;" /></th>
+                                <th class="text-white"><input type="text" placeholder="Search Role" style="width:100%;" /></th>
+                                <th class="text-white"><input type="date"  style="width:100%;" /></th>
                                 <th class="text-white"></th>
                             </tr>
                         </thead>
@@ -47,5 +47,5 @@
 </div>
 
 @section scripts{
-    <script src="~/Content/Pages/User/userIndex.js"></script>
+    <script src="~/Content/Pages/Role/RoleIndex.js"></script>
 }

@@ -1,22 +1,23 @@
 ﻿
 $(document).ready(async function () {
-    await GetAllUser();
+    await GetAllRole();
+
 });
 
 
 let myTable;
 
-const GetAllUser = async () => {
-    if ($.fn.DataTable.isDataTable("#UserTable")) {
-        $('#UserTable').DataTable().clear().destroy();
+const GetAllRole = async () => {
+    if ($.fn.DataTable.isDataTable("#RoleTable")) {
+        $('#RoleTable').DataTable().clear().destroy();
     }
     var sno = 1;
-    myTable = await $('#UserTable').DataTable({
+    myTable = await $('#RoleTable').DataTable({
         "pageLength": 10,
         // processing: true,
         orderCellsTop: true,
         ajax: {
-            url: "/User/GetAllUsers",
+            url: "/Role/GetRole",
             type: "POST",
             cache: false,
             dataSrc: function (resp) {
@@ -25,7 +26,7 @@ const GetAllUser = async () => {
                     return resp.Data == null ? [] : resp.Data
                 }
                 else {
-                    Error("Error",resp.Data);
+                    Error("Error", resp.Data);
                 }
             }
         },
@@ -44,18 +45,20 @@ const GetAllUser = async () => {
             {
                 render: function (data, type, d) {
 
-                    return `<div class="badge ${d.isActive == true ? "badge-success" : "badge-danger"} badge-shadow" style="margin-left:-5px;">${d.isActive == true ? "Yes" : "No"}</div>`
+                    return `<div class="badge ${d.IsActive == true ? "badge-success" : "badge-danger"} badge-shadow" style="margin-left:-5px;">${d.IsActive == true ? "Yes" : "No"}</div>`
                 }
             },
             {
-                data: "UserName"
-            },
-            {
-                data: "UserPassword"
+                data: "RoleName"
             },
             {
                 render: function (data, type, d) {
-                    return '<button data-toggle="tooltip"  data-title="Edit Log" class="btn btn-icon btn-warning" onclick="CarrierForEdit(' + "'" + d.UserID + "'" + ')"><i class="fas fa-edit"></i></button>'
+                    return Datefilter(d.CreatedDate)
+                }
+            },
+            {
+                render: function (data, type, d) {
+                    return '<div class="btn-group"><button data-toggle="tooltip"  data-title="Edit Log" class="btn btn-icon btn-warning" onclick="RoleEdit(' + "'" + d.RoleID + "'" + ')"><i class="fas fa-edit"></i></button><button onclick="DeleteRole(' + "'" + d.RoleID + "'" + ')"  class="btn btn-icon btn-danger" style="margin-left:10px;"  ><i class="fas fa-trash"></i></button></div>'
                 }
             }
 
@@ -140,4 +143,47 @@ function SearchTable() {
 function SelectedRow() {
     var rows_selected = myTable.column(0).checkboxes.selected();
     return rows_selected.join("','")
+}
+
+
+function btnNewadd() {
+    debugger
+    window.location.href = "/Role/Edit";
+}
+
+function RoleEdit(ID) {
+    window.location.href = "/Role/Edit?ID="+ID;
+}
+
+function DeleteRole(ID) {
+    swal({
+        title: "Are you sure?",
+        text: "Do you want Delete Role?",
+        icon: "warning",
+        buttons: [
+            'No!',
+            'Yes, I am sure!'
+        ],
+        dangerMode: true,
+    }).then(function (isConfirm) {
+        if (isConfirm) {
+            $.ajax({
+                type: "POST",
+                url: "/Role/DeleteRole?RoleID=" + ID,
+                contentType: "application/json",
+                datatype: "json",
+                success: function (resp) {
+                    debugger
+                    if (resp.IsSuccess) {
+                        debugger
+                        Success('Success', 'Delete Successfully');
+                        GetAllRole();
+                    } else {
+                        Error("Error", resp.Msg);
+                    }
+                }
+            });
+
+        }
+    })
 }
