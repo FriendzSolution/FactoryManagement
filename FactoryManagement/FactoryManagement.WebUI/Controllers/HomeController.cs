@@ -13,7 +13,7 @@ namespace FactoryManagement.WebUI.Controllers
         // GET: Home
         public ActionResult Index()
         {
-     //       var a = CurrenUser.UserID;
+            var a = CurrenUser.UserID;
             return View();
         }
 

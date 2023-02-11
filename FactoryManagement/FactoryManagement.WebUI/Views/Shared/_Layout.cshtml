@@ -226,8 +226,7 @@
                         <div class="dropdown-menu dropdown-menu-right pullDown">
                             <div class="dropdown-title">Hello Sarah Smith</div>
                             <a href="profile.html" class="dropdown-item has-icon">
-                                <i class="far
-										fa-user"></i> Profile
+                                <i class="far fa-user"></i> Profile
                             </a> <a href="timeline.html" class="dropdown-item has-icon">
                                 <i class="fas fa-bolt"></i>
                                 Activities
@@ -236,7 +235,7 @@
                                 Settings
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="auth-login.html" class="dropdown-item has-icon text-danger">
+                            <a href="javascript:void(0)" class="dropdown-item has-icon text-danger" onclick="Logout()">
                                 <i class="fas fa-sign-out-alt"></i>
                                 Logout
                             </a>
@@ -329,6 +328,8 @@
     <script src="~/Content/assets/js/page/datatables.js"></script>
     <script src="~/Content/assets/js/scripts.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
+    <script src="~/Content/assets/bundles/sweetalert/sweetalert.min.js"></script>
+    <script src="~/Content/Pages/Shared/layoutIndex.js"></script>
     @RenderSection("scripts", false);
 </body>
 </html>

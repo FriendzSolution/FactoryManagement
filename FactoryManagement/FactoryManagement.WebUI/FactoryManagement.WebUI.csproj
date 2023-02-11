@@ -847,6 +847,7 @@
     <Content Include="Content\assets\js\page\widget-data.js" />
     <Content Include="Content\assets\js\scripts.js" />
     <Content Include="Content\Pages\Login\loginIndex.js" />
+    <Content Include="Content\Pages\Shared\layoutIndex.js" />
     <Content Include="Content\Pages\User\userIndex.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />

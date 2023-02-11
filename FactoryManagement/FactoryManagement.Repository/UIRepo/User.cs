@@ -4,8 +4,6 @@ using FactoryManagement.Interface.UIinterface;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FactoryManagement.Repository.UIRepo
@@ -33,6 +31,7 @@ namespace FactoryManagement.Repository.UIRepo
                         modelUser.UserName = Convert.ToString(dr["UserName"]);
                         modelUser.UserPassword = Convert.ToString(dr["UserPassword"]);
                         modelUser.isActive = Convert.ToBoolean(dr["isActive"]);
+                        modelUser.ModifyDate = Convert.ToDateTime(dr["ModifyDate"]);
                         lstUser.Add(modelUser);
                     }
                     _db.ConClose();

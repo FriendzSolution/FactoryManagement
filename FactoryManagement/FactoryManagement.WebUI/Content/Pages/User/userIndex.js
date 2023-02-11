@@ -25,13 +25,14 @@ const GetAllUser = async () => {
                     return resp.Data == null ? [] : resp.Data
                 }
                 else {
-                    swal({
-                        text: "Something Went Wrong!",
-                        icon: "error",
-                        buttonsStyling: !1,
-                        confirmButtonText: "Ok, got it!",
-                        customClass: { confirmButton: "btn btn-danger" },
-                    });
+                    Error("Error",resp.Data);
+                    //swal({
+                    //    text: "Something Went Wrong!",
+                    //    icon: "error",
+                    //    buttonsStyling: !1,
+                    //    confirmButtonText: "Ok, got it!",
+                    //    customClass: { confirmButton: "btn btn-danger" },
+                    //});
                 }
             }
         },
@@ -44,7 +45,7 @@ const GetAllUser = async () => {
             //},
             {
                 render: function (data, type, d) {
-                    return sno++;
+                    return sno++
                 }
             },
             {
@@ -143,7 +144,7 @@ function SearchTable() {
             .draw();
     });
 }
-//function SelectedRow() {
-//    var rows_selected = myTable.column(0).checkboxes.selected();
-//    return rows_selected.join("','")
-//}
+function SelectedRow() {
+    var rows_selected = myTable.column(0).checkboxes.selected();
+    return rows_selected.join("','")
+}
