@@ -4,13 +4,11 @@ using FactoryManagement.Interface.UIinterface;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace FactoryManagement.Repository.UIRepo
 {
-    public class User : IUser
+    public class User :BaseClass, IUser
     {
         private IDB _db;
         public User()

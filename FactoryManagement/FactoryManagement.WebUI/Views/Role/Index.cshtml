@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="card card-secondary">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card-header">
+                <h4>View User Role</h4>
+                <div class="card-header-action">
+                    <button class="btn btn-info btn-icon icon-left" ><i class="fas fa-"></i>Add New</button>
+                    <button class="btn btn-info btn-icon icon-left" ><i class="fas fa-undo"></i>Refresh</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="UserTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    S.no
+                                </th>
+                                <th>Status</th>
+                                <th>User Name</th>
+                                <th>Password</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr class="text-white filters">
+                                <th class="text-white"></th>
+                                <th class="text-white"><select><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></th>
+                                <th class="text-white"><input type="text" placeholder="Search Password" style="width:100%;" /></th>
+                                <th class="text-white"><input type="text" placeholder="Search UserName" style="width:100%;" /></th>
+                                <th class="text-white"></th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/Pages/User/userIndex.js"></script>
+}
