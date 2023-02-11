@@ -1,5 +1,4 @@
 ﻿using FactoryManagement.Common;
-using FactoryManagement.Common.Model;
 using FactoryManagement.Repository.UIRepo;
 using FactoryManagement.Interface.UIinterface;
 using Newtonsoft.Json;
@@ -19,7 +18,6 @@ namespace FactoryManagement.WebUI.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            var a= CurrenUser.UserID;
             return View();
         }
 
@@ -35,7 +33,6 @@ namespace FactoryManagement.WebUI.Controllers
                     var userDTOobj = JsonConvert.SerializeObject(resp.Data);
                     Session["User"] = userDTOobj;
                     resp.IsSuccess = true;
-                    //resp.Data = userDTOobj;
                     resp.Msg = "Login Successfully";
                 }
                 else

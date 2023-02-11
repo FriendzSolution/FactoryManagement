@@ -1,21 +1,12 @@
 ﻿using FactoryManagement.Common;
 using FactoryManagement.Common.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.CustomAttribute
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
-    public class AuthorizationFilter : Attribute, IAuthorizationFilter
+    public class AuthorizationFilter : ActionFilterAttribute, IAuthorizationFilter
     {
-        // private string[] Role { get; set; }
-        public AuthorizationFilter()
-        {
-            //this.Role = Role.Split(',');
-        }
         public void OnAuthorization(AuthorizationContext filterContext)
         {
             string userstring = Convert.ToString(filterContext.HttpContext.Session["User"]);
@@ -52,8 +43,6 @@ namespace FactoryManagement.WebUI.CustomAttribute
                     filterContext.Result = new RedirectResult("/Login/Index");
                 }
             }
-
-
         }
     }
 }

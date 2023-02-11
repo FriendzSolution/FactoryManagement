@@ -1,3 +1,4 @@
+using FactoryManagement.WebUI.CustomAttribute;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace FactoryManagement.WebUI
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            //GlobalFilters.Filters.Add(new AuthorizationFilter());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }
