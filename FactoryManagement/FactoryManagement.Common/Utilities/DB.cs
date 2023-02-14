@@ -174,5 +174,9 @@ namespace FactoryManagement.Common.Utilities
                 }
             }
         }
+        public string getMaxID(string id, string tblname)
+        {
+            return GetNewID("select isnull(max(" + id + "),0)+1 as id from " + tblname + " ");
+        }
     }
 }

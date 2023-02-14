@@ -12,6 +12,8 @@ namespace FactoryManagement.Common.Utilities
         DataTable GetDatatable(string Query);
         SqlDataAdapter GetDataAdapter(string Query);
         string GetNewID(string Query);
+        string getMaxID(string id, string tblname);
+
         string Replace(string str);
         bool Checkstring(string str);
         bool Checkint(int num);
