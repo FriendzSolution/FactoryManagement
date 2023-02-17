@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+<div class="col-12">
+    <div class="card">
+        <form>
+            <div class="card-header">
+                <h6 class="pt-3">ADD NEW USER UNIT</h6>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label>Size Title<span style="color:red"> *</span></label>
+                            <input type="text" id="txtSizeTitle" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-group col-4">
+                        <label class="d-block">IsActive</label>
+                        <div class="form-check pt-2">
+                            <input class="form-check-input" type="checkbox" checked="checked" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Active
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer text-right">
+                <button class="btn btn-primary" type="button" id="btnSaveSize" onclick="btnSave()">Save Data</button>
+                <button class="btn btn-secondary" type="button" id="btnclose" onclick="btnclosee()">Close</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/Pages/Size/SizeEdit.js"></script>
+}   
