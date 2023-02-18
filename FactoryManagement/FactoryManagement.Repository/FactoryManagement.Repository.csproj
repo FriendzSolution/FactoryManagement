@@ -49,7 +49,9 @@
     <Compile Include="BaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIRepo\GoodReceived.cs" />
+    <Compile Include="UIRepo\DesignHead.cs" />
     <Compile Include="UIRepo\Login.cs" />
+    <Compile Include="UIRepo\Customer.cs" />
     <Compile Include="UIRepo\Store.cs" />
     <Compile Include="UIRepo\Size.cs" />
     <Compile Include="UIRepo\Unit.cs" />

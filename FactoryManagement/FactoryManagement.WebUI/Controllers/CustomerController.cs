@@ -9,13 +9,13 @@ using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.Controllers
 {
-    [AuthorizationFilter]
-    public class RoleController : BaseController
+    public class CustomerController : BaseController
     {
-        private IRole _role;
-        public RoleController()
+        private ICustomer _Customer;
+        // GET: Customer
+        public CustomerController()
         {
-            _role = new Role();
+            _Customer = new Customer();
         }
         public ActionResult Index()
         {
@@ -25,15 +25,35 @@ namespace FactoryManagement.WebUI.Controllers
         {
             return View();
         }
-        public async Task<ActionResult> SaveRole(ModelRole modelRole)
+        public async Task<ActionResult> GetCustomer()
         {
             ResponseModel resp = new ResponseModel();
             try
             {
-                modelRole.CreatedBy = CurrenUser.UserID;
-                modelRole.ModifyBy = CurrenUser.UserID;
-                modelRole.fk_Companyid = 1;
-                resp.Data = await _role.SaveRole(modelRole);
+                resp.Data = await _Customer.GetAllCustomer();
+                if (resp.Data != null || resp.Data == null)
+                {
+                    resp.IsSuccess = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                resp.IsSuccess = false;
+                resp.Msg = ex.Message;
+            }
+            return Json(resp);
+        }
+
+        public async Task<ActionResult> SaveCustomer(ModelCustomer modelCustomer)
+        {
+            ResponseModel resp = new ResponseModel();
+            try
+            {
+                modelCustomer.CreatedBy = CurrenUser.UserID;
+                modelCustomer.ModifyBy = CurrenUser.UserID;
+                modelCustomer.fk_CompanyID = 1;
+                resp.Data = await _Customer.SaveCustomer(modelCustomer);
                 if (resp.Data != null)
                 {
                     resp.IsSuccess = true;
@@ -51,12 +71,12 @@ namespace FactoryManagement.WebUI.Controllers
             }
             return Json(resp);
         }
-        public async Task<ActionResult> EditRole(int RoleID)
+        public async Task<ActionResult> EditCustomer(int CustomerID)
         {
             ResponseModel resp = new ResponseModel();
             try
             {
-                resp.Data = await _role.EditRole(RoleID);
+                resp.Data = await _Customer.EditCustomer(CustomerID);
                 if (resp.Data != null)
                 {
                     resp.IsSuccess = true;
@@ -69,31 +89,12 @@ namespace FactoryManagement.WebUI.Controllers
             }
             return Json(resp);
         }
-        public async Task<ActionResult> GetRole()
+        public async Task<ActionResult> DeleteCustomer(int CustomerID)
         {
             ResponseModel resp = new ResponseModel();
             try
             {
-                resp.Data = await _role.GetAllRole();
-                if (resp.Data != null || resp.Data == null)
-                {
-                    resp.IsSuccess = true;
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                resp.IsSuccess = false;
-                resp.Msg = ex.Message;
-            }
-            return Json(resp);
-        }
-        public async Task<ActionResult> DeleteRole(int RoleID)
-        {
-            ResponseModel resp = new ResponseModel();
-            try
-            {
-                resp.Data = await _role.DeleteRole(RoleID,CurrenUser.UserID);
+                resp.Data = await _Customer.DeleteCustomer(CustomerID, CurrenUser.UserID);
                 if (resp.Data != null)
                 {
                     resp.IsSuccess = true;

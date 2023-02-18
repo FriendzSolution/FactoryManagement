@@ -848,7 +848,11 @@
     <Content Include="Content\assets\js\scripts.js" />
     <Content Include="Content\Pages\GoodReceived\grEdit.js" />
     <Content Include="Content\Pages\GoodReceived\grIndex.js" />
+    <Content Include="Content\Pages\DesignHead\DesignHeadEdit.js" />
+    <Content Include="Content\Pages\DesignHead\DesignHeadIndex.js" />
     <Content Include="Content\Pages\Login\loginIndex.js" />
+    <Content Include="Content\Pages\Customer\CustomerEdit.js" />
+    <Content Include="Content\Pages\Customer\CustomerIndex.js" />
     <Content Include="Content\Pages\Store\StoreEdit.js" />
     <Content Include="Content\Pages\Store\StoreIndex.js" />
     <Content Include="Content\Pages\Size\SizeEdit.js" />
@@ -866,6 +870,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\GoodReceivedController.cs" />
+    <Compile Include="Controllers\DesignHeadController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -946,10 +952,14 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Unit\Index.cshtml" />
     <Content Include="Views\Unit\Edit.cshtml" />
+    <Content Include="Views\DesignHead\Index.cshtml" />
+    <Content Include="Views\DesignHead\Edit.cshtml" />
     <Content Include="Views\Size\Index.cshtml" />
     <Content Include="Views\Size\Edit.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Store\Edit.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\GoodReceived\Index.cshtml" />
     <Content Include="Views\GoodReceived\Edit.cshtml" />
     <None Include="Web.Debug.config">
