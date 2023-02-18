@@ -17,7 +17,6 @@ namespace FactoryManagement.WebUI.Controllers
         {
             _role = new Role();
         }
-        // GET: Role
         public ActionResult Index()
         {
             return View();
