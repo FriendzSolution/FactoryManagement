@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="card card-secondary">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card-header">
+                <h4>VIEW STORE</h4>
+                <div class="card-header-action">
+                    <button class="btn btn-info btn-icon icon-left" id="btnNewadd" onclick="btnNewadd();">Add New</button>
+                    <button class="btn btn-info btn-icon icon-left">Refresh</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="StoreTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    S.no
+                                </th>
+                                <th>Status</th>
+                                <th>Store Title</th>
+                                <th>Store Address</th>
+                                <th>Create Date</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr class="text-white filters">
+                                <th class="text-white"></th>
+                                <th class="text-white"><select><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></th>
+                                <th class="text-white"><input type="text" placeholder="Search Store" style="width:100%;" /></th>
+                                <th class="text-white"><input type="text" placeholder="Search Address" style="width:100%;" /></th>
+                                <th class="text-white"><input type="date" style="width:100%;" /></th>
+                                <th class="text-white"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/Pages/Store/StoreIndex.js"></script>
+}

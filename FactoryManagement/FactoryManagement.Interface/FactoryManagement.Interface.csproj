@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIinterface\ILogin.cs" />
+    <Compile Include="UIinterface\IStore.cs" />
     <Compile Include="UIinterface\ISize.cs" />
     <Compile Include="UIinterface\IUnit.cs" />
     <Compile Include="UIinterface\IRole.cs" />

@@ -6,14 +6,20 @@
     <div class="card">
         <form>
             <div class="card-header">
-                <h6 class="pt-3">ADD NEW ITEM UNIT</h6>
+                <h6 class="pt-3">ADD NEW STORE</h6>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-4">
                         <div class="form-group">
-                            <label>Unit Title<span style="color:red"> *</span></label>
-                            <input type="text" id="txtUnitTitle" class="form-control form-control-sm">
+                            <label>Store Title<span style="color:red"> *</span></label>
+                            <input type="text" id="txtStoreTitle" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <label>Store Address<span style="color:red"> *</span></label>
+                            <input type="text" id="txtStoreAddress" class="form-control form-control-sm">
                         </div>
                     </div>
                     <div class="form-group col-4">
@@ -30,7 +36,7 @@
 
             </div>
             <div class="card-footer text-right">
-                <button class="btn btn-primary" type="button" id="btnSaveUnit" onclick="btnSave()">Save Data</button>
+                <button class="btn btn-primary" type="button" id="btnSaveStore" onclick="btnSave()">Save Data</button>
                 <button class="btn btn-secondary" type="button" id="btnclose" onclick="btnclosee()">Close</button>
             </div>
         </form>
@@ -38,5 +44,5 @@
 </div>
 
 @section scripts{
-    <script src="~/Content/Pages/Unit/UnitEdit.js"></script>
+    <script src="~/Content/Pages/Store/StoreEdit.js"></script>
 }   

@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ModelLogin.cs" />
+    <Compile Include="Model\ModelStore.cs" />
     <Compile Include="Model\ModelSize.cs" />
     <Compile Include="Model\ModelUnit.cs" />
     <Compile Include="Model\ModelRole.cs" />

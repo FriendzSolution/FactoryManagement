@@ -847,6 +847,8 @@
     <Content Include="Content\assets\js\page\widget-data.js" />
     <Content Include="Content\assets\js\scripts.js" />
     <Content Include="Content\Pages\Login\loginIndex.js" />
+    <Content Include="Content\Pages\Store\StoreEdit.js" />
+    <Content Include="Content\Pages\Store\StoreIndex.js" />
     <Content Include="Content\Pages\Size\SizeEdit.js" />
     <Content Include="Content\Pages\Size\SizeIndex.js" />
     <Content Include="Content\Pages\Unit\UnitEdit.js" />
@@ -865,6 +867,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomAttribute\AuthorizationFilter.cs" />
@@ -942,6 +945,8 @@
     <Content Include="Views\Unit\Edit.cshtml" />
     <Content Include="Views\Size\Index.cshtml" />
     <Content Include="Views\Size\Edit.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
