@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="~/Content/assets/css/app.min.css">
     <link rel="stylesheet" href="~/Content/assets/bundles/datatables/datatables.min.css">
     <link rel="stylesheet" href="~/Content/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Content/assets/bundles/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="~/Content/assets/bundles/jquery-selectric/selectric.css">
     <link rel="stylesheet" href="~/Content/assets/css/style.css">
     <link rel="stylesheet" href="~/Content/assets/css/components.css">
     <link rel="stylesheet" href="~/Content/assets/css/custom.css">
+
     <link rel='shortcut icon' type='image/x-icon' href='~/Content/assets/img/favicon.ico' />
 
 
@@ -267,10 +270,19 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="/Unit/Index">Unit</a></li>
-                                <li><a class="nav-link" href="/Size/Index">Size</a></li>
-                                <li><a class="nav-link" href="/Store/Index">Store</a></li>
                                 <li><a class="nav-link" href="javascript:void(0)">Design Head</a></li>
                                 <li><a class="nav-link" href="javascript:void(0)">Issuance</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-header">Main Screen</li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown">
+                                <i data-feather="copy"></i><span>
+                                    Main Screen
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/GoodReceived/Index">Good Received</a></li>
                             </ul>
                         </li>
                         <li class="menu-header">User Managment</li>
@@ -335,6 +347,8 @@
     <script src="~/Content/assets/js/page/datatables.js"></script>
     <script src="~/Content/assets/js/scripts.js"></script>
     <script src="~/Content/assets/js/custom.js"></script>
+    <script src="~/Content/assets/bundles/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
     <script src="~/Content/assets/bundles/sweetalert/sweetalert.min.js"></script>
     <script src="~/Content/Pages/Shared/layoutIndex.js"></script>
     @RenderSection("scripts", false);
