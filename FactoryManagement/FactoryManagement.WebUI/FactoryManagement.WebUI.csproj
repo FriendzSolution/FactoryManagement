@@ -846,6 +846,8 @@
     <Content Include="Content\assets\js\page\widget-chart.js" />
     <Content Include="Content\assets\js\page\widget-data.js" />
     <Content Include="Content\assets\js\scripts.js" />
+    <Content Include="Content\Pages\DesignHead\DesignHeadEdit.js" />
+    <Content Include="Content\Pages\DesignHead\DesignHeadIndex.js" />
     <Content Include="Content\Pages\Login\loginIndex.js" />
     <Content Include="Content\Pages\Size\SizeEdit.js" />
     <Content Include="Content\Pages\Size\SizeIndex.js" />
