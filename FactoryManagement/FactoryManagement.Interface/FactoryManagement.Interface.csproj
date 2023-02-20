@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIinterface\IDesignHead.cs" />
+    <Compile Include="UIinterface\IGoodReceived.cs" />
     <Compile Include="UIinterface\ILogin.cs" />
+    <Compile Include="UIinterface\ICustomer.cs" />
     <Compile Include="UIinterface\IStore.cs" />
     <Compile Include="UIinterface\ISize.cs" />
     <Compile Include="UIinterface\IUnit.cs" />

@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="card card-secondary">
+
+    <div class="card-header">
+        <h4>ADD GOOD RECEIVED</h4>
+        <div class="card-header-action">
+            <a class="btn btn-icon btn-danger" href="/GoodReceived/Index"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+    <div class="card-body">
+        <input type="hidden" class="form-control " id="ReceivedID" value="0">
+        <div class="form-row">
+            <div class="form-group col-6">
+                <label>Supplier</label>
+                <select class="Carrier form-control  select2" id="fk_SupplierID">
+                </select>
+            </div>
+            <div class="form-group col-6">
+                <label>Store</label>
+                <select class="Carrier form-control  select2" id="fk_StoreID">
+                </select>
+            </div>
+        </div>
+        <hr />
+        <div class="form-row">
+            <input type="hidden" class="form-control " id="ReceivedDetailID" value="0">
+            <div class="form-group col-4">
+                <label>Design</label>
+                <select class="Carrier form-control  select2" id="fk_DesignID">
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label>Size</label>
+                <select class="Carrier form-control  select2" id="fk_SizeID">
+                </select>
+            </div>
+            <div class="form-group col-4">
+                <label>Quantity</label>
+                <input type="text" class="form-control " id="Quantity">
+
+            </div>
+
+            <div class="form-group col-4">
+                <label>Rate</label>
+                <input type="text" class="form-control " id="Rate">
+            </div>
+            <div class="form-group col-4">
+                <label>Amount</label>
+                <input type="text" class="form-control " id="Amount" disabled>
+            </div>
+            <div class="form-group col-4 m-t-30 ">
+                <button class="btn btn-dark float-right" id="AddtoList">ADD</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-row">
+        <div class="form-group col-12">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="TableReceivedDetails">
+                        <thead>
+                            <tr>
+                                <th>
+                                    S.no
+                                </th>
+                                <th>Design</th>
+                                <th>Size</th>
+                                <th>Quantity</th>
+                                <th>Rate</th>
+                                <th>Amount</th>
+                                @*<th>Action</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-footer text-right">
+        <button class="btn btn-primary">Submit</button>
+    </div>
+
+</div>
+
+@section scripts{
+    <script src="~/Content/Pages/GoodReceived/grEdit.js"></script>
+}

@@ -9,7 +9,7 @@ namespace FactoryManagement.Common.Model
     public class ModelDesignDetail
     {
         public int fk_DesignID { get; set; }
-        public string fk_Size { get; set; }
+        public int fk_Size { get; set; }
         public string DesignTitle { get; set; }
         public string Description { get; set; }
         public bool IsActive { get; set; }
