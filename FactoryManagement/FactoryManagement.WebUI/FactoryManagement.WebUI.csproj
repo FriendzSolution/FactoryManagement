@@ -853,6 +853,8 @@
     <Content Include="Content\Pages\Login\loginIndex.js" />
     <Content Include="Content\Pages\Customer\CustomerEdit.js" />
     <Content Include="Content\Pages\Customer\CustomerIndex.js" />
+    <Content Include="Content\Pages\StoreRights\StoreRightsEdit.js" />
+    <Content Include="Content\Pages\StoreRights\StoreRightsIndex.js" />
     <Content Include="Content\Pages\Store\StoreEdit.js" />
     <Content Include="Content\Pages\Store\StoreIndex.js" />
     <Content Include="Content\Pages\Size\SizeEdit.js" />
@@ -877,6 +879,7 @@
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\StoreRightsController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CustomAttribute\AuthorizationFilter.cs" />
@@ -962,6 +965,8 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\GoodReceived\Index.cshtml" />
     <Content Include="Views\GoodReceived\Edit.cshtml" />
+    <Content Include="Views\StoreRights\Index.cshtml" />
+    <Content Include="Views\StoreRights\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
