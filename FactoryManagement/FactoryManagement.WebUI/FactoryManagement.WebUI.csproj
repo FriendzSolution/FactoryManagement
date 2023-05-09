@@ -857,6 +857,8 @@
     <Content Include="Content\Pages\Store\StoreIndex.js" />
     <Content Include="Content\Pages\Size\SizeEdit.js" />
     <Content Include="Content\Pages\Size\SizeIndex.js" />
+    <Content Include="Content\Pages\Supplier\SupplierEdit.js" />
+    <Content Include="Content\Pages\Supplier\SupplierIndex.js" />
     <Content Include="Content\Pages\Unit\UnitEdit.js" />
     <Content Include="Content\Pages\Unit\UnitIndex.js" />
     <Content Include="Content\Pages\Role\RoleEdit.js" />
@@ -873,6 +875,7 @@
     <Compile Include="Controllers\DesignHeadController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
@@ -965,6 +968,8 @@
     <Content Include="Views\Customer\Edit.cshtml" />
     <Content Include="Views\GoodReceived\Index.cshtml" />
     <Content Include="Views\GoodReceived\Edit.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

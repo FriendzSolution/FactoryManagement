@@ -70,10 +70,12 @@
     <Compile Include="Model\ModelDropdowns.cs" />
     <Compile Include="Model\ModelGoodReceivedDetail.cs" />
     <Compile Include="Model\ModelGoodReceivedHead.cs" />
+    <Compile Include="Model\Modelitem.cs" />
     <Compile Include="Model\ModelLogin.cs" />
     <Compile Include="Model\ModelCustomer.cs" />
     <Compile Include="Model\ModelStore.cs" />
     <Compile Include="Model\ModelSize.cs" />
+    <Compile Include="Model\ModelSupplier.cs" />
     <Compile Include="Model\ModelUnit.cs" />
     <Compile Include="Model\ModelRole.cs" />
     <Compile Include="Model\ModelUser.cs" />

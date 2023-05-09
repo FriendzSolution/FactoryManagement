@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace FactoryManagement.WebUI.Controllers
 {
+    [AuthorizationFilter]
     public class StoreController : BaseController
     {
         private IStore _Store;

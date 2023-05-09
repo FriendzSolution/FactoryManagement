@@ -54,6 +54,7 @@
     <Compile Include="UIRepo\Customer.cs" />
     <Compile Include="UIRepo\Store.cs" />
     <Compile Include="UIRepo\Size.cs" />
+    <Compile Include="UIRepo\Supplier.cs" />
     <Compile Include="UIRepo\Unit.cs" />
     <Compile Include="UIRepo\Role.cs" />
     <Compile Include="UIRepo\User.cs" />

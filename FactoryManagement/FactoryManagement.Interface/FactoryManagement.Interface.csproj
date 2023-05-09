@@ -53,6 +53,7 @@
     <Compile Include="UIinterface\ICustomer.cs" />
     <Compile Include="UIinterface\IStore.cs" />
     <Compile Include="UIinterface\ISize.cs" />
+    <Compile Include="UIinterface\ISupplier.cs" />
     <Compile Include="UIinterface\IUnit.cs" />
     <Compile Include="UIinterface\IRole.cs" />
     <Compile Include="UIinterface\IUser.cs" />
