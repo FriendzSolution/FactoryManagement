@@ -2,14 +2,12 @@
 @{
     ViewBag.Title = "Index";
 }
-
-
 <div class="card card-secondary">
     <div class="row">
         <div class="col-12">
 
             <div class="card-header">
-                <h4>Design Head</h4>
+                <h4>VIEW STORE RIGHTS</h4>
                 <div class="card-header-action">
                     <button class="btn btn-info btn-icon icon-left" id="btnNewadd" onclick="btnNewadd();">Add New</button>
                     <button class="btn btn-info btn-icon icon-left">Refresh</button>
@@ -17,22 +15,22 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped" id="DesignTable">
+                    <table class="table table-striped" id="StoreRightTable">
                         <thead>
                             <tr>
                                 <th>
                                     S.no
                                 </th>
-                                <th>Status</th>
-                                <th>Design Title</th>
-                                <th>Description</th>
+                                <th>Tran Date</th>
+                                <th>User Name</th>
+                                <th>Store Title</th>
                                 <th>Action</th>
                             </tr>
                             <tr class="text-white filters">
                                 <th class="text-white"></th>
-                                <th class="text-white"><select><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></th>
-                                <th class="text-white"><input type="text" placeholder="Search Design Title" style="width:100%;" class="form-control" /></th>
-                                <th class="text-white"><input type="text" placeholder="Search Description" style="width:100%;" class="form-control" /></th>
+                                <th class="text-white"><input type="date" style="width:100%;" class="form-control" /></th>
+                                <th class="text-white"><input type="text" placeholder="Search User" style="width:100%;" class="form-control" /></th>
+                                <th class="text-white"><input type="text" placeholder="Search Store" style="width:100%;" class="form-control" /></th>
                                 <th class="text-white"></th>
                             </tr>
                         </thead>
@@ -46,6 +44,5 @@
 </div>
 
 @section scripts{
-    <script src="~/Content/Pages/DesignHead/DesignHeadIndex.js"></script>
+    <script src="~/Content/Pages/StoreRights/StoreRightsIndex.js"></script>
 }
-

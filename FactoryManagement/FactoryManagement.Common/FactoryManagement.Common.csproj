@@ -78,6 +78,7 @@
     <Compile Include="Model\ModelSupplier.cs" />
     <Compile Include="Model\ModelUnit.cs" />
     <Compile Include="Model\ModelRole.cs" />
+    <Compile Include="Model\ModelStoreRights.cs" />
     <Compile Include="Model\ModelUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResponseModel.cs" />

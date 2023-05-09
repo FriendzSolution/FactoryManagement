@@ -12,6 +12,7 @@ namespace FactoryManagement.Common.Model
         public IEnumerable<ModelStore> GetStores { get; set; }
         public IEnumerable<ModelDesignHead> GetDesignHeads { get; set; }
         public IEnumerable<ModelSize> GetSizes { get; set; }
+        public IEnumerable<ModelUser> GetUserName { get; set; }
 
     }
 }
